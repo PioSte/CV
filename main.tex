@@ -1,0 +1,304 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.6.4, 13 Nov 2021) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+% \usepackage{biblatex}
+
+
+% \usepackage[english,polish]{babel}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{1e6091}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Accent}{HTML}{184e77}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+\boldname{Stępień}{Piotr}{}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Piotr Stępień}
+\tagline{Optomechatronic engineer, PhD in spe}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{3cm}{11613_square}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{piotr1stepien@gmail.com}
+  \phone{887 623 317}
+%   \mailaddress{ul. Mińska 71/263}
+%   \location{03-828, Warsaw}
+%   \homepage{marissamayr.tumblr.com}
+%   \twitter{@marissamayer}
+  \linkedin{piotr1stepien}
+  \github{PioSte}
+  \orcid{0000-0002-7604-4953}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Optomechatronic engineer}{Warsaw University of Technology}{August 2021 -- Ongoing}{Warsaw, PL}
+\begin{itemize}
+\item Horizon 2020 project "REVEAL: Neuronal microscopy for cell behavioural examination and manipulation".
+\item Holographic microscope design and full hardware and software integration.
+\item Technologies: Python, NumPy, Cupy, Arduino, Autodesk Inventor.
+\end{itemize}
+
+\divider
+
+\cvevent{Scholarship, PhD student}{Warsaw University of Technology}{May 2017 -- August 2021}{Warsaw, PL}
+\begin{itemize}
+\item FNP Team-TECH project "BiOpTo: Tomographic phase microscope for biomedical applications".
+\item Conception, design and hardware/software integration of quantitative phase image stitching in the holographic microscope setup.
+\item Design of hologram compression processing path.
+\item Technologies: Python, NumPy, Pyculib, Matlab, Autodesk Inventor, Latex.
+\item Skills: numerical Fourier analysis, image processing, tomographic reconstruction.
+\end{itemize}
+
+\divider
+
+\cvevent{Optomechatronic engineer}{Astri Polska}{May 2016 --  April 2017}{Warsaw, PL}
+\begin{itemize}
+\item Ray tracing software development, numerical phase aberration correction, optical hardware selection, measurement uncertainty estimation, mechanical design.
+\item Technologies: Matlab/Octave, Autodesk Inventor.
+\end{itemize}
+
+\divider
+
+\cvevent{M.S. student scholarship}{Warsaw University of Technology}{April 2015 -- May 2015}{Warsaw, PL}
+
+\begin{itemize}
+\item FNP Team project "3DPhase -- Phase Microscopy and Tomography"
+\item Software integration of the holographic tomographs hardware components, assembling and alignment of the holographic tomograph, CAD modeling of the holographic tomograph.
+\item Technologies: Matlab, Autodesk Inventor.
+\end{itemize}
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+% \cvsection{A Day of My Life}
+
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% % Some ad-hoc tweaking to adjust the labels so that they don't overlap
+% \hspace*{-1em}  %% quick hack to move the wheelchart a bit left
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/13em/accent!30/Sleeping \& dreaming about work,
+%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+%   5/11em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+%   20/11em/accent!40/Spending time with family,
+%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+%   30/9em/accent/Showing Yahoo!\ \mbox{employees} that their work has meaning,
+%   5/8em/accent!20/Baking cupcakes
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+\newpage
+
+\cvsection{Publications}
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}}, type=article]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+% \cvsection{Life Philosophy}
+% \begin{quote}
+% ``If you don't have any shadows, you're not standing in the light.''
+% \end{quote}
+
+\cvsection{Education}
+
+\cvevent{PhD\ in Photonics Engineering}{Warsaw University of Technology, Faculty of Mechatronics}{2017 -- 2022}{}
+"Quantitative phase imaging of biological structures in digital holographic microscopy and tomography with extended field of view."
+% Ilościowe obrazowanie fazowe struktur biologicznych w optycznej mikroskopii i tomografii holograficznej z rozszerzonym polem widzenia
+
+\divider
+
+\cvevent{MSc\ in Photonics Engineering}{Warsaw University of Technology, Faculty of Mechatronics}{2015 -- 2016}{}
+% Budowa systemu mikroskopu fazowego z oświetleniem LED i przestrzennym modulatorem intensywności.
+"Design of phase microscope with frequency modulation based on spatial light modulator and with LED illumination."
+
+\divider
+
+\cvevent{Eng.\ in Photonics Engineering}{Warsaw University of Technology, Faculty of Mechatronics}{2011 -- 2015}{}
+"The construction of the self-interference holographic tomography setup."
+
+
+\cvsection{Most Proud of}
+
+% \cvachievement{\faTrophy}{Courage I had}{to take a sinking ship and try to make it float.}
+
+% \divider
+
+\cvachievement{\faTrophy}{Best accuracy MNIST classifier}{during the International Summer School on Deep Learning in Gdańsk (2018).}
+
+\divider
+
+\cvachievement{\faCloud}{Self-hosted cloud}{Nextcloud, Plex and PiHole set up with Docker.}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Persistence}{I showed despite the hard moments during my PhD.}
+
+% \divider
+
+% \cvachievement{\faFemale}{Inspiring women in tech}{Youngest CEO on Fortune's list of 50 most powerful women.}
+
+\cvsection{Strengths}
+
+\cvtag{Inquisitive}
+\cvtag{Creative}
+\cvtag{Quick learner}
+\cvtag{Versatile}
+\cvtag{Attention to detail}
+
+% \divider\smallskip
+
+% \cvtag{UX}
+% \cvtag{Mobile Devices \& Applications}
+% \cvtag{Product Management \& Marketing}
+
+\cvsection{Languages}
+
+\cvskill{English}{4.5}
+% \divider
+
+% \cvskill{Spanish}{4}
+% \divider
+
+\cvskill{German}{1} %% supports X.5 values.
+
+\newpage
+
+\cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Prof.\ dr hab. inż. Małgorzata Kujawińska}{Institute of Micromechanics\\\hspace{2mm}and Photonics}{m.kujawinska@pw.edu.pl}
+\hspace{6.7mm}{ul. Św. Andrzeja Boboli 8\\\hspace{6.7mm}Warsaw 02-525\\\hspace{6.7mm}room 515}
+% {ul. Św. Andrzeja Boboli 8\\Warsaw 02-525\\room 515}
+
+\divider
+
+\cvref{Dr\ Wojciech Krauze}{Institute of Micromechanics\\\hspace{2mm}and Photonics}{w.krauze@pw.edu.pl}
+\hspace{6.7mm}{ul. Św. Andrzeja Boboli 8\\\hspace{6.7mm}Warsaw 02-525\\\hspace{6.7mm}room 520A}
+% {ul. Św. Andrzeja Boboli 8\\Warsaw 02-525\\room 515}
+
+\end{paracol}
+
+\end{document}
